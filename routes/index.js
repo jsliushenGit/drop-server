@@ -1,7 +1,7 @@
 const router = require('koa-router')()
 
 router.get('/', (ctx, next) => {
-  ctx.body = 'hi koa2'
+  ctx.body = '<h1>静水流深</h1>'
 })
 
 router.get('/string', async (ctx, next) => {
