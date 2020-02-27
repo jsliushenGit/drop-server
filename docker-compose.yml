@@ -31,16 +31,4 @@ services:
     image: redis
     ports:
       - 6379:6379
-
-  node:
-    image: registry.cn-shenzhen.aliyuncs.com/yxw-docker/node8.9.3:latest
-    container_name: node
-    hostname: node
-    ports:
-      - "7001:7001"
-    working_dir: /source/lx-egg
-    links:
-      - redis:redis
-    volumes:
-    - /source:/source
       
