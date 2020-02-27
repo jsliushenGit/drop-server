@@ -43,7 +43,4 @@ services:
       - redis:redis
     volumes:
     - /source:/source
-
-  pm2:
-    img: keymetrics/pm2-docker-alpine:8
       
