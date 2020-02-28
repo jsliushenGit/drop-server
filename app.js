@@ -5,6 +5,7 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const mongoConfig = require('./config/mongo')
+const cors = require('koa-cors')
 
 mongoConfig.connect()
 
@@ -17,6 +18,7 @@ const type = require('./routes/type')
 onerror(app)
 
 // middlewares
+app.use(cors())
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
